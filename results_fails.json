@@ -1,0 +1,1055 @@
+[
+  {
+    "uri": "features/bad_usage.feature",
+    "id": "bad-usage",
+    "keyword": "Feature",
+    "name": "Bad usage",
+    "description": "    As a lazy coffee user\n    I can ignore the message displayed by the machine\n    So I can have coffee and let other people have to clean after me",
+    "line": 1,
+    "elements": [
+      {
+        "id": "bad-usage;full-grounds-does-not-block-coffee",
+        "keyword": "Scenario",
+        "name": "Full grounds does not block coffee",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 8,
+            "comments": [
+              {
+                "value": "# You keep getting coffee even if the \"Empty grounds\" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.",
+                "line": 7
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32740
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the grounds",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16143
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I take \"50\" coffees",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73029
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Empty grounds\" should be displayed",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 47756
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "coffee should be served",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:18"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 20021
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/can_be_configured.feature",
+    "id": "can-be-configured",
+    "keyword": "Feature",
+    "name": "Can be configured",
+    "description": "    As this is a high quality product\n    It is possible to configure it\n    In order to get the best possible coffees",
+    "line": 1,
+    "elements": [
+      {
+        "id": "can-be-configured;display-settings",
+        "keyword": "Scenario",
+        "name": "Display settings",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16292
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I switch to settings mode",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11479
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "displayed message is:",
+            "line": 9,
+            "doc_string": {
+              "value": "Settings:\n - 1: water hardness\n - 2: grinder",
+              "content_type": "",
+              "line": 10
+            },
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30122
+            }
+          }
+        ]
+      },
+      {
+        "id": "can-be-configured;default-settings",
+        "keyword": "Scenario",
+        "name": "Default settings",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15981
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I switch to settings mode",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10308
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "settings should be:",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58873
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/display_errors/beans.feature",
+    "id": "beans",
+    "keyword": "Feature",
+    "name": "Beans",
+    "description": "    As a coffee lover\n    I have to put fresh beans from time to time\n    So I can have coffee when I need it",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16494
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the beans",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12648
+            }
+          }
+        ]
+      },
+      {
+        "id": "beans;message-\"fill-beans\"-is-displayed-after-38-coffees-are-taken",
+        "keyword": "Scenario",
+        "name": "Message \"Fill beans\" is displayed after 38 coffees are taken",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I take \"38\" coffees",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63570
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Fill beans\" should be displayed",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31756
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15432
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the beans",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10371
+            }
+          }
+        ]
+      },
+      {
+        "id": "beans;it-is-possible-to-take-40-coffees-before-there-is-really-no-more-beans",
+        "keyword": "Scenario",
+        "name": "It is possible to take 40 coffees before there is really no more beans",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I take \"40\" coffees",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53065
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "coffee should be served",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16503
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I take a coffee",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16091
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "coffee should not be served",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16726
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "message \"Fill beans\" should be displayed",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22304
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15301
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the beans",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10681
+            }
+          }
+        ]
+      },
+      {
+        "id": "beans;after-adding-beans,-the-message-\"fill-beans\"-disappears",
+        "keyword": "Scenario",
+        "name": "After adding beans, the message \"Fill beans\" disappears",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I take \"40\" coffees",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54604
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I fill the beans tank",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11859
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Ready\" should be displayed",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24628
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/display_errors/grounds.feature",
+    "id": "grounds",
+    "keyword": "Feature",
+    "name": "Grounds",
+    "description": "    As a coffee lover\n    I have to empty the grounds\n    So I don't end up with a total mess around the coffee machine",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16376
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the grounds",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11919
+            }
+          }
+        ]
+      },
+      {
+        "id": "grounds;message-\"empty-grounds\"-is-displayed-after-30-coffees-are-taken",
+        "keyword": "Scenario",
+        "name": "Message \"Empty grounds\" is displayed after 30 coffees are taken",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I take \"30\" coffees",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44575
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Empty grounds\" should be displayed",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21959
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15418
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the grounds",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10937
+            }
+          }
+        ]
+      },
+      {
+        "id": "grounds;when-the-grounds-are-emptied,-message-is-removed",
+        "keyword": "Scenario",
+        "name": "When the grounds are emptied, message is removed",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I take \"30\" coffees",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42859
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I empty the coffee grounds",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9758
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Ready\" should be displayed",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21340
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/display_errors/water.feature",
+    "id": "water",
+    "keyword": "Feature",
+    "name": "Water",
+    "description": "    As a coffee lover\n    I have to handle the water tank\n    So I can have coffee when I need it",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15268
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the water tank",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11461
+            }
+          }
+        ]
+      },
+      {
+        "id": "water;message-\"fill-water-tank\"-is-displayed-after-50-coffees-are-taken",
+        "keyword": "Scenario",
+        "name": "Message \"Fill water tank\" is displayed after 50 coffees are taken",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I take \"50\" coffees",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62290
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Fill tank\" should be displayed",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30786
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15650
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the water tank",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11121
+            }
+          }
+        ]
+      },
+      {
+        "id": "water;it-is-possible-to-take-10-coffees-after-the-message-\"fill-water-tank\"-is-displayed",
+        "keyword": "Scenario",
+        "name": "It is possible to take 10 coffees after the message \"Fill water tank\" is displayed",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I take \"60\" coffees",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72741
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "coffee should be served",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16378
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I take a coffee",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9395
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "coffee should not be served",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15011
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15824
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I handle everything except the water tank",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11446
+            }
+          }
+        ]
+      },
+      {
+        "id": "water;when-the-water-tank-is-filled,-the-message-disappears",
+        "keyword": "Scenario",
+        "name": "When the water tank is filled, the message disappears",
+        "description": "",
+        "line": 20,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I take \"55\" coffees",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68250
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I fill the water tank",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9744
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Ready\" should be displayed",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22345
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/serve_coffee.feature",
+    "id": "serve-coffee",
+    "keyword": "Feature",
+    "name": "Serve coffee",
+    "description": "    As a coffee lover\n    I can get coffee from the machine\n    So I can enjoy the rest of the day",
+    "line": 1,
+    "elements": [
+      {
+        "id": "serve-coffee;simple-use",
+        "keyword": "Scenario",
+        "name": "Simple use",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 8,
+            "comments": [
+              {
+                "value": "# Well, sometimes, you just get a coffee.",
+                "line": 7
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15144
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I take a coffee",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10621
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "coffee should be served",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15662
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/support_internationalisation.feature",
+    "id": "support-internationalisation",
+    "keyword": "Feature",
+    "name": "Support internationalisation",
+    "description": "    As a polyglot coffee lover\n    I can select the language on the coffee machine\n    So I can practice my use of greetings in several languages",
+    "line": 1,
+    "elements": [
+      {
+        "id": "support-internationalisation;no-messages-are-displayed-when-machine-is-shut-down",
+        "keyword": "Scenario",
+        "name": "No messages are displayed when machine is shut down",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the coffee machine is started",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15218
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I shutdown the coffee machine",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10575
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"\" should be displayed",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20452
+            }
+          }
+        ]
+      },
+      {
+        "id": "support-internationalisation;messages-are-based-on-language;;2",
+        "keyword": "Scenario Outline",
+        "name": "Messages are based on language",
+        "description": "",
+        "line": 18,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I start the coffee machine using language \"en\"",
+            "line": 18,
+            "comments": [
+              {
+                "value": "# Well, sometimes, you just get a coffee.",
+                "line": 12
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19058
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Ready\" should be displayed",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23351
+            }
+          }
+        ]
+      },
+      {
+        "id": "support-internationalisation;messages-are-based-on-language;;3",
+        "keyword": "Scenario Outline",
+        "name": "Messages are based on language",
+        "description": "",
+        "line": 19,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I start the coffee machine using language \"fr\"",
+            "line": 19,
+            "comments": [
+              {
+                "value": "# Well, sometimes, you just get a coffee.",
+                "line": 12
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18634
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "message \"Pret\" should be displayed",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/step_definitions.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20778
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

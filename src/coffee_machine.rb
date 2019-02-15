@@ -1,5 +1,5 @@
 class CoffeeMachine
-  attr_reader :coffee_served, :started
+  attr_reader :coffee_served, :started, :attempts
 
   def initialize
     @started = false
@@ -15,6 +15,7 @@ class CoffeeMachine
     @water_hardness = 2
     @grinder = "medium"
     @settings_displayed = false
+    @attempts = "three"
   end
 
   def start(lang = 'en')

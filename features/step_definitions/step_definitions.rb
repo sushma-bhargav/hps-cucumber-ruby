@@ -15,6 +15,10 @@ Then /^message "(.*)" should be displayed$/ do |message|
   message_message_should_be_displayed(message)
 end
 
+And /^It displays "(.*)" attempts remaining$/ do |attempts|
+  it_displays_attempts_attempts_remaining(attempts)
+end
+
 Then /^coffee should be served$/ do
   coffee_should_be_served
 end

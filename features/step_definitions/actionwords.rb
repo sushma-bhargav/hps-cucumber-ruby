@@ -17,6 +17,10 @@ module Actionwords
     sut.start(lang)
   end
 
+  def it_displays_attempts_attempts_remaining(attempts = 'three')
+    assert_equal(sut.attempts, attempts)
+  end
+
   def i_shutdown_the_coffee_machine
     sut.stop
   end
