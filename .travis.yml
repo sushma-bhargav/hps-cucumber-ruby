@@ -2,13 +2,8 @@ language: ruby
 rvm: 2.5.1
 sudo: false
 
-before_install:
- - gem install hiptest-publisher
- - "hiptest-publisher -c cucumber.conf --token=$SECRET_TOKEN --only=features,step_definitions --test-run-id=3507"
-
 script:
  - bundle exec cucumber --format json --out results.json
 
 after_script:
-  - hiptest-publisher -c cucumber.conf --token=$SECRET_TOKEN --push=results.json --test-run-id=3507
   - curl -X POST https://hiptest-pth.ngrok.io/connect/rest/api/results -H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI0OTYxMjc4Yi0yNTM3LTMwYjEtYTU3MC00OGEwZWIzNWQ2N2QiLCJjb250ZXh0Ijp7InByb2plY3RfaWQiOiIxMDAxMCIsInJlcG9zaXRvcnlfbmFtZSI6IlBoaWxUaG9tMjUvaHBzLWN1Y3VtYmVyLXJ1YnkifX0.pwop-TBdcLupmF7XfQRX6U8zKApqFjVFWPHunqWjlKE' -H 'content-type: multipart/form-data' -F results_file=@results.json
