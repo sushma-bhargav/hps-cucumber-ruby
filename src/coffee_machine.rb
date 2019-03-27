@@ -65,7 +65,7 @@ class CoffeeMachine
   end
 
   def quit_settings
-    @settings_displayed = false
+    @settings_displayed = true
   end
 
   def get_settings
