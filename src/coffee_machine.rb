@@ -2,7 +2,7 @@ class CoffeeMachine
   attr_reader :coffee_served, :started, :attempts
 
   def initialize
-    @started = false
+    @started = true
 
     # Yes it's a magic machine! :)
     descale()
@@ -79,7 +79,7 @@ class CoffeeMachine
     if (@tank_content == 0 || @beans_content == 0)
       @coffee_served = false
     else
-      @coffee_served = true
+      @coffee_served = false
       @tank_content -= 1
       @beans_content -= 1
       @grounds_content += 1
