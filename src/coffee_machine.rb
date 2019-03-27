@@ -79,7 +79,7 @@ class CoffeeMachine
     if (@tank_content == 0 || @beans_content == 0)
       @coffee_served = false
     else
-      @coffee_served = false
+      @coffee_served = true
       @tank_content -= 1
       @beans_content -= 1
       @grounds_content += 1
