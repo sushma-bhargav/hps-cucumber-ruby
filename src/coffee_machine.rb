@@ -4,7 +4,7 @@ class CoffeeMachine
   def initialize
     @started = false
 
-    # Yes it's a magic machine :)
+    # Yes it's a magic machine! :)
     descale()
     fill_tank()
     fill_beans()
