@@ -6,8 +6,8 @@ script:
  - bundle exec cucumber --format json --out results.json
 
 after_script:
-          - |
-            curl -X POST https://livingdoc-jira-app.scalingo.io/connect/rest/api/results \
-             -H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI0OTYxMjc4Yi0yNTM3LTMwYjEtYTU3MC00OGEwZWIzNWQ2N2QiLCJjb250ZXh0Ijp7InByb2plY3RfaWQiOiIxMDAxMyIsInJlcG9zaXRvcnlfbmFtZSI6IlBoaWxUaG9tMjUvaHBzLWN1Y3VtYmVyLXJ1YnkifX0.mjqJIts2IzEkEezFQJpRwrDeGfINIDZD2ubMaOVgXX4' \
-             -H 'content-type: multipart/form-data' \
-             -F results_file=@results.json
+  - |
+    curl -X POST https://livingdoc-jira-app.scalingo.io/connect/rest/api/results \
+     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI0OTYxMjc4Yi0yNTM3LTMwYjEtYTU3MC00OGEwZWIzNWQ2N2QiLCJjb250ZXh0Ijp7InByb2plY3RfaWQiOiIxMDAxNSIsInJlcG9zaXRvcnlfbmFtZSI6IlBoaWxUaG9tMjUvaHBzLWN1Y3VtYmVyLXJ1YnkifX0.SeDEsYTsP_A4vju3CnjFmDkl92Rb0y8egi-tujJ7B6o' \
+     -H 'content-type: multipart/form-data' \
+     -F results_file=@results.json
