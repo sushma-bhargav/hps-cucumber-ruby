@@ -91,7 +91,7 @@ module Actionwords
     i_handle_coffee_grounds
   end
 
-  def i_handle_everything_except_the_grounds
+  def I_handle_most_of_the_amazing_things_except_the_grounds
     i_handle_water_tank
     i_handle_beans
   end
