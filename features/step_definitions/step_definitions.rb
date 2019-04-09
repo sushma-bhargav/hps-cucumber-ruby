@@ -71,8 +71,8 @@ Given /^I handle everything except the beans$/ do
   i_handle_everything_except_the_beans
 end
 
-Given /^I handle everything except the grounds$/ do
-  I_handle_most_of_the_amazing_things_except_the_grounds
+Given /^I handle most of the amazing things except the grounds$/ do
+  i_handle_everything_except_the_grounds
 end
 
 Then /^displayed message is:$/ do |__free_text|
