@@ -88,7 +88,7 @@ class CoffeeMachine
   end
 
   def fill_tank
-    @tank_content = 60
+    @tank_content = 50
   end
 
   def fill_beans
