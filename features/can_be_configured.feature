@@ -1,5 +1,4 @@
 Feature: Can be configured
-#xtory
     As this is a high quality product
     It is possible to configure it
     In order to get the best possible coffees
