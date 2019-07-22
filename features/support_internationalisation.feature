@@ -1,7 +1,7 @@
 Feature: Support internationalisation
     As a polyglot coffee lover
     I can select the language on the coffee machine
-    So I can practice my use of greetings in several languages
+    So I can practice my use of greetings in several languages okay?
 
   Background:
     Given a user
