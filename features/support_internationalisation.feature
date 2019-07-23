@@ -8,7 +8,7 @@ Feature: Support internationalisation
 
   Scenario: No messages are displayed when machine is shut down
     This is description ofscenario
-    ok?  hey ! cc
+    ok?
     
     Given the coffee machine is started
     When I shutdown the coffee machine
