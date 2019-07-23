@@ -16,7 +16,7 @@ Feature: Support internationalisation
 
   Scenario Outline: Messages are based on language
     this is description of outline
-    okay? xx
+    okay
     
     # Well, sometimes, you just get a coffee.
     When I start the coffee machine using language "<language>"
