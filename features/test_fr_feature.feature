@@ -6,6 +6,6 @@ Fonctionnalité: Ceci est une fonctionnalité francaise
   Scénario: on essaie
     Etant donné que je suis francais
     Quand je dis quelque chose
-    Et que j'ai tord
+    Et que j'ai tort
     Alors tant pis
  
