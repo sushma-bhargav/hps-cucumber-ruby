@@ -7,5 +7,4 @@ Fonctionnalité: Ceci est une fonctionnalité francaise
     Etant donné que je suis francais
     Quand je dis quelque chose
     Et que j'ai tort
-    Alors tant pis
- 
+    Alors rien à faire
