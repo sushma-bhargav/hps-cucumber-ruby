@@ -7,8 +7,8 @@ Feature: Beans
     Given the coffee machine is started
     And I handle everything except the beans
 
-  Scenario: Message "Fill beans" is displayed after 38 coffees are taken
-    When I take "38" coffees
+  Scenario: Message "Fill beans" is displayed after 39 coffees are taken
+    When I take "39" coffees
     Then message "Fill beans" should be displayed
 
   Scenario: It is possible to take 40 coffees before there is really no more beans
