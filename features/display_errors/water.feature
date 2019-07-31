@@ -21,3 +21,9 @@ Feature: Water
     Given I take "55" coffees
     When I fill the water tank
     Then message "Ready" should be displayed
+
+ Scenario: When the water tank is not filled, the message remains
+    Given I take "55" coffees
+    When I fill the water tank
+    When I take a coffee
+    Then coffee should not be served
