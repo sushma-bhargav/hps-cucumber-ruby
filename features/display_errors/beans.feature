@@ -22,8 +22,4 @@ Feature: Beans
     Given I take "41" coffees
     When I fill the beans tank
     Then message "Ready" should be displayed
-
- Scenario: After adding beans, the message "Fill beans" disappears
-    Given I take "40" coffees
-    When I fill the beans tank
-    Then message "Ready" should be displayed
+    
