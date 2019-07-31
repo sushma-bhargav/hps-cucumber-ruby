@@ -18,7 +18,13 @@ Feature: Beans
     Then coffee should not be served
     And message "Fill beans" should be displayed
 
-  Scenario: After adding beans, the message "Fill beans" disappears
+  Scenario: After adding beans, the message "Fill beans" remains
+    Given I take "41" coffees
+    When I fill the beans tank
+    Then coffee should not be served
+    And message "Fill beans" should be displayed
+
+ Scenario: After adding beans, the message "Fill beans" disappears
     Given I take "41" coffees
     When I fill the beans tank
     Then message "Ready" should be displayed
