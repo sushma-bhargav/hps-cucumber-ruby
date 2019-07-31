@@ -12,7 +12,7 @@ Feature: Beans
     Then message "Fill beans" should be displayed
 
   Scenario: It is possible to take 40 coffees before there is really no more beans
-    Given I take "41" coffees
+    Given I take "40" coffees
     Then coffee should be served
     When I take a coffee
     Then coffee should not be served
