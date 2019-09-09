@@ -30,7 +30,7 @@ Feature: Support internationalisation
       | two |
       | three |
 
-    @language @ready
+    @language @ready @other
     Examples:
       | language | ready_message | hiptest-uid |
       | en | Ready |  |
