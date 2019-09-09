@@ -23,12 +23,14 @@ Feature: Support internationalisation
     Then message "<ready_message>" should be displayed
     And It displays "<attempts>" attempts remaining
 
+    @attempts @tests
     Examples: Attempts
       | attempts |
       | one |
       | two |
       | three |
 
+    @language @ready
     Examples:
       | language | ready_message | hiptest-uid |
       | en | Ready |  |
