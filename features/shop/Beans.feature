@@ -1,7 +1,8 @@
-Feature: Beans Insert
+Feature: Beans
     As a coffee lover
     I have to put fresh beans from time to time
     So I can have coffee when I need it
+    Insert
 
   Background:
     Given the coffee machine is started
