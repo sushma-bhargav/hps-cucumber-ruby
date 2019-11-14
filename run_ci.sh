@@ -16,9 +16,6 @@ header "push results to living documentation"
 # Set here the Curl command of CI Settings in the living documentation tab
 
 
-echo ""
-
-
 header "Done"
 
 exit $EXIT_STATUS
