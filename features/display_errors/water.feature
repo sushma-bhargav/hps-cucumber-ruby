@@ -12,7 +12,7 @@ Feature: Water
     Then message "Fill tank" should be displayed
 
   Scenario: It is possible to take 10 coffees after the message "Fill water tank" is displayed
-    Given I take "70" coffees
+    Given I take "60" coffees
     Then coffee should be served
     When I take a coffee
     Then coffee should not be served
@@ -21,9 +21,3 @@ Feature: Water
     Given I take "55" coffees
     When I fill the water tank
     Then message "Ready" should be displayed
-
- Scenario: When the water tank is not filled, the message remains
-    Given I take "55" coffees
-    When I fill the water tank
-    When I take a coffee
-    Then coffee should not be served

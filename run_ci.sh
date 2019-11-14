@@ -17,7 +17,7 @@ header "push results to living documentation"
 
 # curl -X POST https://c4j.cucumber.io/ci/rest/api/results -H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uc21hcnRiZWFyLmN1Y3VtYmVyIiwiYXVkIjoiY2kiLCJjb250ZXh0Ijp7ImxpdmluZ19kb2NfaWQiOjMwNX0sImlhdCI6MTU3MTEyNTE5MX0.FGa9rMMq6IVdyQYbjKi_ZDCWTUgV0VNXYmsdR1oyevE' -H 'content-type: multipart/form-data' -F results_file=@results.json -F language=ruby
 curl -X POST https://c4j.cucumber.io/ci/rest/api/results \
--H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uc21hcnRiZWFyLmN1Y3VtYmVyIiwiYXVkIjoiY2kiLCJjb250ZXh0Ijp7ImxpdmluZ19kb2NfaWQiOjM2NX0sImlhdCI6MTU3MzczMjIyNH0.YLzrrdLfxG42jVXRVa-qQpmPHVfwtK_YpkS7buPQzic' \
+-H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uc21hcnRiZWFyLmN1Y3VtYmVyIiwiYXVkIjoiY2kiLCJjb250ZXh0Ijp7ImxpdmluZ19kb2NfaWQiOjM2Nn0sImlhdCI6MTU3MzczNDM2NX0.9YJG9wAOlRLJW2FkDAxlJeaGpoaRnWvutu5NYip01SQ' \
 -H 'content-type: multipart/form-data' \
 -F results_file=@results.json \
 -F language=ruby
