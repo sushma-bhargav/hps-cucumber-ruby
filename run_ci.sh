@@ -1,0 +1,35 @@
+#!/bin/bash
+EXIT_STATUS=0
+
+header() {
+  echo "==============================================================================="
+  echo $*
+  echo "==============================================================================="
+}
+
+header "bundle exec cucumber"
+bundle exec cucumber
+bundle exec cucumber --format json --out results.json || EXIT_STATUS=$?
+
+header "push results to living documentation"
+
+# Set here the Curl command of CI Settings in the living documentation tab
+
+# curl -X POST https://c4j.cucumber.io/ci/rest/api/results -H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uc21hcnRiZWFyLmN1Y3VtYmVyIiwiYXVkIjoiY2kiLCJjb250ZXh0Ijp7ImxpdmluZ19kb2NfaWQiOjMwNX0sImlhdCI6MTU3MTEyNTE5MX0.FGa9rMMq6IVdyQYbjKi_ZDCWTUgV0VNXYmsdR1oyevE' -H 'content-type: multipart/form-data' -F results_file=@results.json -F language=ruby
+curl -X POST https://c4j.cucumber.io/ci/rest/api/results \
+-H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uc21hcnRiZWFyLmN1Y3VtYmVyIiwiYXVkIjoiY2kiLCJjb250ZXh0Ijp7ImxpdmluZ19kb2NfaWQiOjM2NX0sImlhdCI6MTU3MzczMjIyNH0.YLzrrdLfxG42jVXRVa-qQpmPHVfwtK_YpkS7buPQzic' \
+-H 'content-type: multipart/form-data' \
+-F results_file=@results.json \
+-F language=ruby
+
+echo ""
+
+header "Push results to test cycle"
+version_id="-1"
+cycle_id="af9f6341-164b-43a6-8d4a-8fc04e9887ee"
+project_id="12428"
+curl -X POST 'https://prod-api.zephyr4jiracloud.com/connect/public/rest/api/1.0/bdd/results/import' -H 'Authorization: JWT eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbWx5WVRwa04yRXpOMlppTkMwMk5tUTBMVFF6T0RrdE9USTBaQzFtWXpFMk56ZGtaV1F3WXprZ05XSXdOVGczWmpsak9ETmlOelkxWlRSak16ZGpaalE1SUZWVFJWSmZSRVZHUVZWTVZGOU9RVTFGIiwiaWF0IjoxNTcxMDY4NjcyLCJleHAiOjE1NzM2NjA2NzIsInFzaCI6ImExYzI4YWNlY2I3OGViYWY2NDNkNzlmYTQ5Yzc5YWMwMjNkYTI0ZDE4ZTE0Njc2ODVlZDgxMjFiYmJlZGU1ZjAiLCJzdWIiOiI1YjA1ODdmOWM4M2I3NjVlNGMzN2NmNDkifQ.M1_kkpyAEWMszJ06yG_hHSAqHqv5y4Us9Ie3slD9tZk' -H 'ZapiAccessKey: amlyYTpkN2EzN2ZiNC02NmQ0LTQzODktOTI0ZC1mYzE2NzdkZWQwYzkgNWIwNTg3ZjljODNiNzY1ZTRjMzdjZjQ5IFVTRVJfREVGQVVMVF9OQU1F' -F 'cycleId=$cycle_id&versionId=$version_id&projectId=$project_id' -F bddresult=@results.json
+
+header "Done"
+
+exit $EXIT_STATUS
