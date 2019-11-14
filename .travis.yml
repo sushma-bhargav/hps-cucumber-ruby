@@ -7,7 +7,8 @@ script:
 
 after_script:
   - |
-    curl -X POST https://livingdoc-jira-app.scalingo.io/connect/rest/api/results \
-     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI0OTYxMjc4Yi0yNTM3LTMwYjEtYTU3MC00OGEwZWIzNWQ2N2QiLCJjb250ZXh0Ijp7InByb2plY3RfaWQiOiIxMDAxNyIsInJlcG9zaXRvcnlfbmFtZSI6IlBoaWxUaG9tMjUvaHBzLWN1Y3VtYmVyLXJ1YnkifX0.XqCQawQIPA_NBEqOcoccu4lfK-LrTvDWdATrvU3gUzc' \
-     -H 'content-type: multipart/form-data' \
-     -F results_file=@results.json
+    curl -X POST https://c4j.cucumber.io/ci/rest/api/results \
+    -H 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uc21hcnRiZWFyLmN1Y3VtYmVyIiwiYXVkIjoiY2kiLCJjb250ZXh0Ijp7ImxpdmluZ19kb2NfaWQiOjM2Nn0sImlhdCI6MTU3MzczNjM1N30.lO8UFix2Oi6bDXj1EGxT3DeyyVxbeTQxxQLYUOEXGXo' \
+    -H 'content-type: multipart/form-data' \
+    -F results_file=@results.json \
+    -F language=ruby
