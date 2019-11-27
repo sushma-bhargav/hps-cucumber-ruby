@@ -1,4 +1,4 @@
-Feature: Serve coffee
+Feature: test move
 
   Scenario: Simple use of move
     When I take a coffee
