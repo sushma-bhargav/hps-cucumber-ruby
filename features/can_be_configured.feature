@@ -15,7 +15,7 @@ Feature: Can be configured
 
   Scenario: Default settings
     Given the coffee machine is started
-    # When I switch to settings mode
+    When I switch to settings mode
     Then settings should be:
       | water hardness | 2      |
       | grinder        | medium |
